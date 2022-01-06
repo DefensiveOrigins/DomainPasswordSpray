@@ -253,12 +253,12 @@ function Countdown-Timer
 {
     param(
         $Seconds = 1800,
-        $Message = "[*] Pausing to avoid account lockout.",
+        $Message = "[*] Pausing to avoid account lockout",
         [switch] $Quiet = $False
     )
     if ($quiet)
     {
-        Write-Host $Message": Waiting for $($Seconds/60) minutes. $($Seconds - $Count)"
+        Write-Host ${Message}: "Waiting for $($Seconds/60) minutes. $($Seconds - $Count)"
         Start-Sleep -Seconds $Seconds
     } else {
         foreach ($Count in (1..$Seconds))
